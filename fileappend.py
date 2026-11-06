@@ -1,0 +1,5 @@
+file = open("sample.txt","a")
+file.write("\nWelcome to IOT lab")
+file.write("\nThis is Append operation")
+file.close()
+print("text appended successfully")

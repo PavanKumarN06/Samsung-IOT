@@ -1,0 +1,27 @@
+
+from gpiozero import LED
+led_red = LED(20)
+
+print("LED Control Program")
+print("Type 'on' to turn ON the LED")
+print("Type 'off' to turn OFF the LED")
+print("Type 'exit' to stop the program")
+
+while True:
+    command = input("Enter command: ").lower()
+
+    if command == "on":
+        led_red.on()
+        print("LED is ON")
+
+    elif command == "off":
+        led_red.off()
+        print("LED is OFF")
+
+    elif command == "exit":
+        led_red.off()
+        print("Program stopped")
+        break
+
+    else:
+        print("Invalid command! Please type on, off, or exit.")
